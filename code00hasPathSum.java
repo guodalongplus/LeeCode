@@ -4,7 +4,7 @@ public class code00hasPathSum {
     code00hasPathSum left;
     code00hasPathSum right;
     int val;
-
+//取值函数
     code00hasPathSum(int val) {
         this.val = val;
     }
