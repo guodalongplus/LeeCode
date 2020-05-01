@@ -8,7 +8,7 @@ class TrieNode {
     public TrieNode() {}
 }
 
-class Code7TrideNode {
+class Code5TrideNode {
     char[][] _board = null;
     ArrayList<String> _result = new ArrayList<String>();
 
@@ -89,7 +89,7 @@ class Code7TrideNode {
                 };
         String[] s={"cat","dog","abc"};
 
-        Code7TrideNode code=new Code7TrideNode();
+        Code05TrideNode code=new Code05TrideNode();
         List<String>an=code.findWords(board,s);
         System.out.println(an);
 
