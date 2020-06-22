@@ -41,9 +41,9 @@ public class RemoveDuplicates {
 //                    flag=false;
 //                }
 //            }
-//        }}
-//        System.out.println(count);
-//        return nums;
+//        }
+//      }
+//        return count;
 //    }
     public static void main(String[] args) {
 
