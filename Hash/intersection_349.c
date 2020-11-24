@@ -3,25 +3,25 @@
  */
  #define MAX_SIZE 1024
 int* intersection(int* nums1, int nums1Size, int* nums2, int nums2Size, int* returnSize){
-    /*³õÊ¼»¯Êı×é
+    /*åˆå§‹åŒ–æ•°ç»„
      int* hash=(int*)calloc(MAX_SIZE,sizeof(int));
      int* res= (int*)calloc(MAX_SIZE,sizeof(int));
-     callocÄÚ²¿ÏÈÊÇmalloc ÔÙ¸³Öµ0£¬ËùÒÔÃ»ÓĞ malloc ¸ßĞ§ 
+     callocå†…éƒ¨å…ˆæ˜¯malloc å†èµ‹å€¼0ï¼Œæ‰€ä»¥æ²¡æœ‰ malloc é«˜æ•ˆ 
     */
 
-    int* hash=malloc(sizeof(int) * MAX_SIZE);//¼ÇÂ¼ÔªËØ³öÏÖ´ÎÊı
+    int* hash=malloc(sizeof(int) * MAX_SIZE);
     memset(hash,0,sizeof(int) * MAX_SIZE);
-    int* res=malloc(sizeof(int) * MAX_SIZE);//¼ÇÂ¼ÔªËØ³öÏÖ´ÎÊı
+    int* res=malloc(sizeof(int) * MAX_SIZE);
     memset(res,0,sizeof(int) * MAX_SIZE);
-    for(int i=0;i<nums1Size;i++){//ÎŞÖØ¸´Ìí¼ÓÔªËØµ½¹şÏ£±í
+    for(int i=0;i<nums1Size;i++){//æ— é‡å¤æ·»åŠ å…ƒç´ åˆ°å“ˆå¸Œè¡¨
         if(hash[nums1[i]]==0)
             hash[nums1[i]]++;
     }
     *returnSize=0;
     for(int j=0;j<nums2Size;j++){
         if(hash[nums2[j]]){
-            hash[nums2[j]]--;//ÕÒµ½ÖØ¸´µÄÔªËØºó£¬ÏÈ°Ñ¹şÏ£±í¸ÃÔªËØµÄ¸öÊı¼õÒ»(¼´Î»0)
-            res[(*returnSize)++]=nums2[j];//ÔÙÌí¼Ó¸ÃÔªËØµ½½»¼¯ÖĞ
+            hash[nums2[j]]--;//æ‰¾åˆ°é‡å¤çš„å…ƒç´ åï¼Œå…ˆæŠŠå“ˆå¸Œè¡¨è¯¥å…ƒç´ çš„ä¸ªæ•°å‡ä¸€(å³ä½0)
+            res[(*returnSize)++]=nums2[j];//å†æ·»åŠ è¯¥å…ƒç´ åˆ°äº¤é›†ä¸­
         }
     }
     free(hash);
